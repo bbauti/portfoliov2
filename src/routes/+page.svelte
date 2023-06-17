@@ -1,0 +1,23 @@
+
+<script>
+
+	import Header from "../components/header.svelte";
+    import Stack from "../components/stack.svelte";
+    import Proyects from "../components/proyects.svelte";
+    // import Contactform from "../components/contactform.svelte";
+
+    import Icon from '@iconify/svelte';
+
+</script>
+
+<nav>
+    <a href='/' class='logo'>inicio</a>
+    <a href="/" class='links disabled'>cv</a>
+</nav>
+<main>
+    <Header/>
+    <Stack/>
+    <Proyects/>
+
+    <!-- <Contactform/> -->
+</main>
