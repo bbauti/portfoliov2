@@ -4,7 +4,7 @@
 	import Header from "../components/header.svelte";
     import Stack from "../components/stack.svelte";
     import Proyects from "../components/proyects.svelte";
-    // import Contactform from "../components/contactform.svelte";
+    import Contact from "../components/contact.svelte";
 
     import Icon from '@iconify/svelte';
 
@@ -12,12 +12,12 @@
 
 <nav>
     <a href='/' class='logo'>inicio</a>
+    <a href="#contact" class='links'>contacto</a>
     <a href="/" class='links disabled'>cv</a>
 </nav>
 <main>
     <Header/>
     <Stack/>
     <Proyects/>
-
-    <!-- <Contactform/> -->
+    <Contact/>
 </main>

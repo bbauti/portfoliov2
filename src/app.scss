@@ -18,6 +18,7 @@ html {
     color: $text-color;
     letter-spacing: 0.2rem;
     font-family: "Rifton";
+    scroll-behavior:smooth;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -28,6 +29,9 @@ main {
 
 .textheader {
     text-align: center;
+}
+
+section:not(#title):not(#stack) {
     margin-top: 20vw;
 }
 
@@ -113,14 +117,14 @@ nav {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    padding: 0 10vw;
+    padding: 0 1vw;
     border-radius: 20px;
     overflow: auto;
     bottom: 20px;
     left: 0;
     right: 0;
     height: 55px;
-    gap: 8vw;
+    gap: 1vw;
     width: fit-content;
     background-color: #ffffff1c;
     backdrop-filter: blur(10px);
@@ -132,7 +136,7 @@ nav > a, nav > a:visited {
     color: $important-text;
     text-decoration: none;
     transition: .1s ease-in-out;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     border-radius: 10px;
     letter-spacing: 0.1rem;
     &:hover {
@@ -278,7 +282,12 @@ header {
 // Proyects //
 //////////////
 
+#proyects {
+    scroll-margin-top: -3vw;
+}
+
 .proyects {
+    scroll-margin-top: 5vw;
     margin-top: 5vw;
     display: grid;
     align-items: center;
@@ -370,6 +379,111 @@ article > .head {
     color: #b8b8b8;
 }
 
+
+/////////////
+// Contact //
+/////////////
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inputs {
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+    color: $important-text;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #a8a8a80a;
+    outline: none;
+    border: 1px solid #a8a8a85d;
+}
+
+.inputs::placeholder {
+    color: #a8a8a85d;
+}
+
+input[type='Submit'] {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #a8a8a85d;
+    outline: none;
+    border: 1px solid white;
+    width: 100%;
+}
+
+.divInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.error {
+    color: #ce3f3f;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #ce3f3f3f;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3rem;
+    cursor: default;
+    line-height: 1.3rem;
+    // user-select: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+#contact {
+    margin-bottom: 6rem;
+    margin-bottom: 6rem;
+}
+
+.formsending {
+    color: rgb(230, 230, 230);
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    text-align: center;
+    cursor: default;
+    line-height: 1.3rem;
+}
+
+.formerror {
+    color: #ce3f3f;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    text-align: center;
+    cursor: default;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #ce3f3f3f;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3rem;
+    line-height: 1.3rem;
+}
+
+.formsent {
+    color: #3fce52;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    text-align: center;
+    cursor: default;
+    text-underline-offset: 0.3rem;
+    line-height: 1.3rem;
+}
+
+
 ///////////
 // Media //
 ///////////
@@ -403,15 +517,17 @@ article > .head {
 
     
     .textheader {
-        margin-top: 15vw;
         margin-bottom: 3.5vw;
+    }
+
+    section:not(#title):not(#stack)  {
+        margin-top: 15vw;
     }
 
     .proyects {
         margin: 0 auto;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        width: 70rem;
         gap: 40px;
         grid-auto-rows: minmax(10px, auto);
     }
@@ -419,6 +535,36 @@ article > .head {
     .proyects > article {
         margin: 0 0 1vw 0;
         // padding: 2rem;
+    }
+
+    
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 60vw;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (min-width: 950px) {
+
+    form {
+        width: 45vw;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .proyects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    form {
+        width: 30vw;
     }
 
 }
