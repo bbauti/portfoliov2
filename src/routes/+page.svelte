@@ -13,7 +13,7 @@
 <nav>
     <a href='/' class='logo'>inicio</a>
     <a href="#contact" class='links'>contacto</a>
-    <a href="/" class='links disabled'>cv</a>
+    <a href="/" id='disabled' class='links'>cv</a>
 </nav>
 <main>
     <Header/>

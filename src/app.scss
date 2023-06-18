@@ -145,7 +145,7 @@ nav > a, nav > a:visited {
     }
 }
 
-.disabled {
+#disabled {
     pointer-events: none;
     color: $text-color;
 }
@@ -402,6 +402,7 @@ form {
     background-color: #a8a8a80a;
     outline: none;
     border: 1px solid #a8a8a85d;
+    resize: none
 }
 
 .inputs::placeholder {
@@ -409,12 +410,17 @@ form {
 }
 
 input[type='Submit'] {
+    font-family: "Rifton";
+    color: rgb(216, 216, 216);
+    font-weight: 800;
+    letter-spacing: 0.1rem;
     padding: 1rem;
     border-radius: 10px;
-    background-color: #a8a8a85d;
+    background-color: #0e0e0e5d;
     outline: none;
-    border: 1px solid white;
+    border: 1px solid #a8a8a85d;
     width: 100%;
+    cursor: pointer;
 }
 
 .divInput {
