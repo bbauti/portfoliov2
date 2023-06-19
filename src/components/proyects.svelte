@@ -10,7 +10,7 @@
 		{
             'name': ['Portfolio'],
             'desc': 'Estas en esta aplicacion web, creada para demostrar mis habilidades',
-            'source': 'https://github.com/bbauti/portfoliosvelte',
+            'source': 'https://github.com/bbauti/portfoliov2',
             'link': '',
             'status': '',
             'lenguagesColor': ['HTML','CSS','SCSS','JavaScript','Svelte','Vite'],

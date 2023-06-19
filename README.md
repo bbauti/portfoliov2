@@ -1,38 +1,43 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Portfolio
 
-## Creating a project
+Portfolio personal
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Demo
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+[bbauti.me](https://bbauti.me/)
 
-## Developing
+## Correr localmente
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Clona el proyecto
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+  git clone https://github.com/bbauti/portfoliov2.git
 ```
 
-## Building
-
-To create a production version of your app:
+Entra al directorio
 
 ```bash
-npm run build
+  cd portfoliov2
 ```
 
-You can preview the production build with `npm run preview`.
+Instala las dependencias
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+  npm install
+```
+
+Inicia el servidor
+
+```bash
+  npm run dev
+```
+
+
+## Environment Variables
+
+Para los correos uso [web3forms](https://web3forms.com/), por lo que es necesario que crees un api key y lo includas en un .ENV en el root del directorio.
+
+`VITE_ACCESS_KEY=<key> `
+
