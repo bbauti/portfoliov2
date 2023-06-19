@@ -9,7 +9,7 @@
     let proyects = [
 		{
             'name': ['Portfolio'],
-            'desc': 'Estas en esta aplicacion web, creada para demostrar mis habilidades',
+            'desc': 'Estas en esta aplicación web, creada para demostrar mis habilidades.',
             'source': 'https://github.com/bbauti/portfoliov2',
             'link': '',
             'status': '',
@@ -18,46 +18,55 @@
         },
         {
             'name': ['Inventory App', '1rem'],
-            'desc': 'Aplicacion web dedicada al control del inventario de una institución escolar. Se empleo la metodología SCRUM, y se me ha asignado el rol de desarrollador y DevOps.',
+            'desc': 'Aplicación web dedicada al control del inventario de una institución escolar. Se empleó la metodología SCRUM, y se me ha asignado el rol de desarrollador y DevOps.',
             'source': 'https://bitbucket.org/arrudeboy/inventory/src',
             'link': '',
             'status': 'wip',
             'lenguagesColor': ['Python','Python','Jinja2','JavaScript','HTML','CSS','SQL'],
             'lenguages': ['PY','Flask','Jinja2','JS','HTML','CSS','SQL']
         },
-        {
-            'name': ['Todo App'],
-            'desc': 'Pagina web para gestionar tareas con el uso de localStorage.',
-            'source': 'https://github.com/bbauti/p5todoapp',
-            'link': 'https://bbauti.github.io/p5todoapp',
-            'status': 'done',
-            'lenguagesColor': ['HTML','CSS','JavaScript'],
-            'lenguages': ['HTML','CSS','JS']
-        },
-        {
-            'name': ['Weather Channel'],
-            'desc': 'Pagina web para obtener informacion sobre el clima.',
-            'source': 'https://github.com/bbauti/p5weatherChannel',
-            'link': 'https://bbauti.github.io/p5weatherChannel',
-            'status': 'done',
-            'lenguagesColor': ['HTML','CSS','JavaScript'],
-            'lenguages': ['HTML','CSS','JS']
-        },
-        {
-            'name': ['Color Game'],
-            'desc': 'El juego Color Game. Se trata sobre adivinar un color en formato rgb, con unos cuadrados de colores aleatorios.',
-            'source': 'https://github.com/bbauti/p5colorgame',
-            'link': 'https://bbauti.github.io/p5colorgame',
-            'status': 'done',
-            'lenguagesColor': ['HTML','CSS','JavaScript'],
-            'lenguages': ['HTML','CSS','JS']
-        },
+        // {
+        //     'name': ['Proximamente'],
+        //     'desc': 'Próximamente más proyectos!',
+        //     'source': 'https://github.com/bbauti/',
+        //     'link': '',
+        //     'status': 'wip',
+        //     'lenguagesColor': [],
+        //     'lenguages': []
+        // },
+        // {
+        //     'name': ['Todo App'],
+        //     'desc': 'Pagina web para gestionar tareas con el uso de localStorage.',
+        //     'source': 'https://github.com/bbauti/p5todoapp',
+        //     'link': 'https://bbauti.github.io/p5todoapp',
+        //     'status': 'done',
+        //     'lenguagesColor': ['HTML','CSS','JavaScript'],
+        //     'lenguages': ['HTML','CSS','JS']
+        // },
+        // {
+        //     'name': ['Weather Channel'],
+        //     'desc': 'Pagina web para obtener informacion sobre el clima.',
+        //     'source': 'https://github.com/bbauti/p5weatherChannel',
+        //     'link': 'https://bbauti.github.io/p5weatherChannel',
+        //     'status': 'done',
+        //     'lenguagesColor': ['HTML','CSS','JavaScript'],
+        //     'lenguages': ['HTML','CSS','JS']
+        // },
+        // {
+        //     'name': ['Color Game'],
+        //     'desc': 'El juego Color Game. Se trata sobre adivinar un color en formato rgb, con unos cuadrados de colores aleatorios.',
+        //     'source': 'https://github.com/bbauti/p5colorgame',
+        //     'link': 'https://bbauti.github.io/p5colorgame',
+        //     'status': 'done',
+        //     'lenguagesColor': ['HTML','CSS','JavaScript'],
+        //     'lenguages': ['HTML','CSS','JS']
+        // },
 	];
 
 
     // Compruebo si la propiedad con el nombre del lenguaje existe en el json, y si es asi, retorno ese color
 
-    const checkColor = (leng) => {
+    export const checkColor = (leng) => {
         if (colores[leng]) {
             return colores[leng];
         } else {

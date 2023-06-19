@@ -62,7 +62,7 @@
             {#if errors.email}<p class='error'>{errors.email}</p>{/if}
         </div>
         <div class='divInput'>
-            <textarea class="inputs" name="message" cols="30" rows="5" bind:value={values.message} placeholder="Cuéntame un poco mas sobre vos o tu proyecto" ></textarea>
+            <textarea class="inputs" name="message" cols="30" rows="5" bind:value={values.message} placeholder="Contame un poco más sobre vos o tu proyecto" ></textarea>
             {#if errors.message}<p class='error'>{errors.message}</p>{/if}
         </div>
         <div class='divInput'>
