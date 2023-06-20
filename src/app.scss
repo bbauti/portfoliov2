@@ -152,7 +152,7 @@ nav {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    padding: 0 1vw;
+    padding: 1vw;
     border-radius: 20px;
     overflow: auto;
     bottom: 20px;
@@ -171,8 +171,8 @@ nav > a, nav > a:visited {
     color: $important-text;
     text-decoration: none;
     transition: .1s ease-in-out;
-    padding: 1rem 0.5rem;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 15px;
     letter-spacing: 0.1rem;
     &:hover {
         text-shadow: 0px 0px 10px $important-text-alpha-s;
@@ -502,7 +502,6 @@ input[data-autocompleted] {
 
 #contact {
     margin-bottom: 6rem;
-    margin-bottom: 6rem;
 }
 
 .formsending {
@@ -554,8 +553,10 @@ input[data-autocompleted] {
     font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
     font-weight: 700;
     letter-spacing: 0.05rem;
-    max-width: 35vw;
+    // max-width: 35vw;
+    max-width: 80vw;
     color: #d1d1d1;
+    margin-bottom: 6rem;
 }
 
 strong a, strong a:visited {
@@ -579,10 +580,12 @@ strong {
     nav {
         padding: 0 1vw;
         gap: 0.5vw;
+        border-radius: 15px;
     }
 
     nav > a, nav > a:visited { 
-        padding: 0.5vw;
+        padding: 0.8vw;
+        border-radius: 10px;
     }
 
     .presentation {
@@ -631,6 +634,10 @@ strong {
         gap: 1rem;
         width: 60vw;
         margin: 0 auto;
+    }
+
+    .about {
+        max-width: 35vw;
     }
 
 }
