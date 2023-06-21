@@ -1,0 +1,38 @@
+{
+  "page": {
+    "home": {
+      "title": "Hello! I'm",
+      "desc": "A developer and artist."
+    },
+    "projects": {
+      "title": "Projects",
+      "portfoliodesc": "You are in this web application, created to showcase my skills.",
+      "inventorydesc": "This web application is dedicated to inventory control in a school institution. It was developed using SCRUM methodology, and I was assigned the roles of developer and DevOps."
+    },
+    "contact": {
+      "title": "Contact Me",
+      "name": "Your name and surname",
+      "email": "Your email",
+      "textfield": "Tell me more about yourself or your project",
+      "send": "Send",
+      "errors": {
+        "required": "Please make sure to enter a value.",
+        "tooshort": "The entered value is too short. It should contain at least [X] characters.",
+        "bademail": "Please make sure to enter a valid email.",
+        "messgerequired": "The message field cannot be empty."
+      },
+      "status": {
+        "sending": "Sending...",
+        "sent": "Message sent successfully!",
+        "error": "An error occurred in the form."
+      }
+    },
+    "about": {
+      "desc": "About Me",
+      "section1": "Hello! I am a <strong>full-stack developer</strong> from <strong>Buenos Aires, Argentina</strong>. I have experience in developing applications for both desktop and mobile devices.",
+      "section2": "I have worked on various projects, with a notable highlight being my participation in <strong><a href=\"https://bitbucket.org/arrudeboy/inventory/src\" target=\"_blank\">Inventory App</a></strong>, a significant project completed during my studies with my classmates and professor. In that project, I fulfilled the roles of <strong>Developer and DevOps</strong>.",
+      "section3": "I have always had a passion for programming and possess strong knowledge in <strong>HTML, CSS, JS, Python</strong>, and various frameworks and libraries. Currently, I am expanding my knowledge by learning PHP.",
+      "section4": "Furthermore, I have experience in utilizing <strong>agile methodologies</strong> such as <strong>SCRUM</strong>. I am a quick learner when it comes to new technologies or methodologies, always dedicated to delivering high-quality work."
+    }
+  }
+}

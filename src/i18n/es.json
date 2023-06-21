@@ -1,0 +1,38 @@
+{
+  "page": {
+    "home": {
+      "title": "¡Hola! Soy",
+      "desc": "Un desarrollador y artista."
+    },
+    "projects": {
+      "title": "Proyectos",
+      "portfoliodesc": "Estás en esta aplicación web, creada para demostrar mis habilidades.",
+      "inventorydesc": "Aplicación web dedicada al control del inventario de una institución escolar. Se empleó la metodología SCRUM, y se me ha asignado el rol de desarrollador y DevOps."
+    },
+    "contact": {
+      "title": "Contáctame",
+      "name": "Tu nombre y apellido",
+      "email": "Tu correo",
+      "textfield": "Cuéntame un poco más sobre ti o tu proyecto",
+      "send": "Enviar",
+      "errors": {
+        "required": "Por favor, asegúrate de introducir un valor.",
+        "tooshort": "El valor ingresado es demasiado corto. Como mínimo, debe contener [X] caracteres.",
+        "bademail": "Asegúrate de ingresar un correo electrónico válido.",
+        "messgerequired": "El campo del mensaje no puede estar vacío."
+      },
+      "status": {
+        "sending": "Enviando...",
+        "sent": "¡Mensaje enviado correctamente!",
+        "error": "Ha ocurrido un error en el formulario."
+      }
+    },
+    "about": {
+      "desc": "Sobre mí",
+      "section1": "¡Hola! Soy un <strong>desarrollador fullstack</strong> de <strong>Buenos Aires, Argentina</strong>. Poseo experiencia en el desarrollo de aplicaciones tanto para escritorio como para dispositivos móviles.",
+      "section2": "Trabajé en diversos proyectos, destacando especialmente mi participación en <strong><a href=\"https://bitbucket.org/arrudeboy/inventory/src\" target=\"_blank\">Inventory App</a></strong>, un gran proyecto realizado durante mis estudios con mis compañeros y profesor, donde cumplí las funciones de <strong>Developer y DevOps</strong>.",
+      "section3": "Siempre me ha gustado la programación, contando con sólidos conocimientos en <strong>HTML, CSS, JS, Python</strong>, y varias frameworks y librerías. Actualmente estoy aprendiendo PHP, intentando expandir aún más mis conocimientos.",
+      "section4": "Además, tengo experiencia en el uso de <strong>metodologías ágiles</strong> como <strong>SCRUM</strong>. Soy una persona que se adapta rápidamente a nuevas tecnologías o metodologías, siempre enfocado en ofrecer un trabajo de <strong>alta calidad</strong>."
+    }
+  }
+}
