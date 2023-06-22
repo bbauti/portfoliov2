@@ -2,7 +2,7 @@
   "page": {
     "home": {
       "title": "Hello! I'm",
-      "desc": "A developer and artist."
+      "desc": "A <a href='#proyects' id='developer'>developer</a> and <a href='https://be.net/bbauti' target='_blank' id='artist'>artist.</a>"
     },
     "projects": {
       "title": "Projects",
@@ -19,7 +19,7 @@
         "required": "Please make sure to enter a value.",
         "tooshort": "The entered value is too short. It should contain at least [X] characters.",
         "bademail": "Please make sure to enter a valid email.",
-        "messgerequired": "The message field cannot be empty."
+        "messagerequired": "The message field cannot be empty."
       },
       "status": {
         "sending": "Sending...",

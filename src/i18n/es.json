@@ -2,7 +2,7 @@
   "page": {
     "home": {
       "title": "¡Hola! Soy",
-      "desc": "Un desarrollador y artista."
+      "desc": "Un <a href='#proyects' id='developer'>desarrollador</a> y <a href='https://be.net/bbauti' target='_blank' id='artist'>artista.</a>"
     },
     "projects": {
       "title": "Proyectos",
@@ -19,7 +19,7 @@
         "required": "Por favor, asegúrate de introducir un valor.",
         "tooshort": "El valor ingresado es demasiado corto. Como mínimo, debe contener [X] caracteres.",
         "bademail": "Asegúrate de ingresar un correo electrónico válido.",
-        "messgerequired": "El campo del mensaje no puede estar vacío."
+        "messagerequired": "El campo del mensaje no puede estar vacío."
       },
       "status": {
         "sending": "Enviando...",

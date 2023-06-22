@@ -1,45 +1,54 @@
 <script>
-// @ts-nocheck
+	// @ts-nocheck
 
+	// i18n
+	import { i } from '@inlang/sdk-js';
+
+	//validation
 	import * as yup from 'yup';
 	const schema = yup.object().shape({
-        access_key: yup.string(),
-        name: yup.string().required('Introduce tu nombre.').min( 4, "El nombre ingresado es demasiado corto. Por favor, intenta nuevamente."),
-		email: yup.string().required('Introduce tu correo electrónico.').email("Asegúrate de ingresar un correo electrónico válido."),
-		message: yup.string().required('El campo del mensaje no puede estar vacío.')
+		access_key: yup.string(),
+		name: yup
+			.string()
+			.required(i('page.contact.errors.required'))
+			.min(4, i('page.contact.errors.tooshort')),
+		email: yup
+			.string()
+			.required(i('page.contact.errors.required'))
+			.email(i('page.contact.errors.badmail')),
+		message: yup.string().required(i('page.contact.errors.messagerequired'))
 	});
 
 	let values = {};
 	let errors = {};
-    let statustext = "";
-    let statusvalue = ""
+	let statustext = '';
+	let statusvalue = '';
 
 	async function submitHandler() {
 		try {
-            statustext = 'Enviando...'
-            statusvalue = 'formsending'
-            window.scrollTo(0, document.body.scrollHeight);
-			// `abortEarly: false` to get all the errors
+			statustext = i('page.contact.status.sending');
+			statusvalue = 'formsending';
+			window.scrollTo(0, document.body.scrollHeight);
 			await schema.validate(values, { abortEarly: false });
 			errors = {};
-            values.access_key = import.meta.env.VITE_ACCESS_KEY
-            const json = JSON.stringify(values);        
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                },
-                body: json
-            });    
-            const result = await response.json();
-            if (result.success) {
-                statustext = "Mensaje enviado correctamente!"
-                statusvalue = 'formsent'
-            }
+			values.access_key = import.meta.env.VITE_ACCESS_KEY;
+			const json = JSON.stringify(values);
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json'
+				},
+				body: json
+			});
+			const result = await response.json();
+			if (result.success) {
+				statustext = i('page.contact.status.sent');
+				statusvalue = 'formsent';
+			}
 		} catch (err) {
-            statustext = 'Ha ocurrido un error en el formulario.'
-            statusvalue = 'formerror'
+			statustext = i('page.contact.status.error');
+			statusvalue = 'formerror';
 			errors = extractErrors(err);
 		}
 	}
@@ -49,25 +58,72 @@
 		}, {});
 	}
 
+	//contact and home navbar selected
+
+	import { inview } from 'svelte-inview'; // check if is in view
+
+	let isInView;
+
+	let navhome;
+	let navcontact;
+	function leaveContact() {
+		navhome = document.getElementById('navhome');
+		navcontact = document.getElementById('navcontact');
+		navcontact.classList.remove('current');
+		navhome.classList.add('current');
+	}
+	function enterContact() {
+		navhome = document.getElementById('navhome');
+		navcontact = document.getElementById('navcontact');
+		navcontact.classList.add('current');
+		navhome.classList.remove('current');
+	}
 </script>
-<section id='contact'>
-    <p class='textheader'>Contactame</p>
-    <form on:submit|preventDefault={submitHandler}>
-        <div class='divInput'>
-            <input class="inputs" type="text" name="name" bind:value={values.name} placeholder="Tu nombre y apellido" />
-            {#if errors.name}<p class='error'>{errors.name}</p>{/if}
-        </div>
-        <div class='divInput'>
-            <input class="inputs" type="text" name="email" bind:value={values.email} placeholder="Tu correo" />
-            {#if errors.email}<p class='error'>{errors.email}</p>{/if}
-        </div>
-        <div class='divInput'>
-            <textarea class="inputs" name="message" cols="30" rows="5" bind:value={values.message} placeholder="Contame un poco más sobre vos o tu proyecto" ></textarea>
-            {#if errors.message}<p class='error'>{errors.message}</p>{/if}
-        </div>
-        <div class='divInput'>
-            <input type="submit" value="Enviar"/>
-            <div class='status {statusvalue}' >{statustext}</div>
-        </div>
-    </form>
+
+<section id="contact">
+	<p
+		class="textheader"
+		use:inview
+		on:inview_enter={() => enterContact()}
+		on:inview_leave={() => leaveContact()}
+	>
+		{i('page.contact.title')}
+	</p>
+	<form on:submit|preventDefault={submitHandler}>
+		<div class="divInput">
+			<input
+				class="inputs"
+				type="text"
+				name="name"
+				bind:value={values.name}
+				placeholder={i('page.contact.name')}
+			/>
+			{#if errors.name}<p class="error">{errors.name}</p>{/if}
+		</div>
+		<div class="divInput">
+			<input
+				class="inputs"
+				type="text"
+				name="email"
+				bind:value={values.email}
+				placeholder={i('page.contact.email')}
+			/>
+			{#if errors.email}<p class="error">{errors.email}</p>{/if}
+		</div>
+		<div class="divInput">
+			<textarea
+				class="inputs"
+				name="message"
+				cols="30"
+				rows="5"
+				bind:value={values.message}
+				placeholder={i('page.contact.textfield')}
+			/>
+			{#if errors.message}<p class="error">{errors.message}</p>{/if}
+		</div>
+		<div class="divInput">
+			<input type="submit" value={i('page.contact.send')} />
+			<div class="status {statusvalue}">{statustext}</div>
+		</div>
+	</form>
 </section>

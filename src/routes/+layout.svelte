@@ -8,7 +8,9 @@
 	export let data;
 	import { browser } from '$app/environment';
 	let mobile = false;
+	let current;
 	if (browser) {
+		current = window.location.pathname;
 		if (
 			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 		) {
@@ -17,10 +19,21 @@
 			mobile = false;
 		}
 	}
-	let current = '/';
 	const handleClick = (param) => () => {
 		current = param;
 	};
+
+	// i18n
+
+	import { i, languages, switchLanguage, language } from '@inlang/sdk-js';
+
+	let reset = {};
+	let protocol;
+
+	function restart() {
+		location.reload();
+		current = window.location.pathname;
+	}
 </script>
 
 {#key data.pathname}
@@ -31,26 +44,45 @@
 			<slot />
 		</div>
 	{/if}
-	<nav>
+	<nav class="nav">
 		<a
 			href="/"
 			title="Home"
+			id="navhome"
 			on:click={handleClick('/')}
 			class="logo {current === '/' ? 'current' : ''}"><Icon icon="ant-design:home-filled" /></a
 		>
 		<a
 			href="/#contact"
 			title="Contacto"
-			on:click={handleClick('/#contact')}
+			id="navcontact"
+			on:click={handleClick('/#!contact')}
 			class="links {current === '/#contact' ? 'current' : ''}"><Icon icon="uil:message" /></a
 		>
 		<a
 			href="/about"
 			title="About"
+			id="navabout"
 			on:click={handleClick('/about')}
 			class="links {current === '/about' ? 'current' : ''}"
 			><Icon icon="fluent:person-48-filled" /></a
 		>
 		<a href="/" title="CV" id="disabled" class="links"><Icon icon="mdi:resume" /></a>
+	</nav>
+	<nav class="navleng">
+		<button
+			id={language === 'es' ? 'current' : ''}
+			on:click={() => switchLanguage('es')}
+			on:click={restart}
+		>
+			<Icon icon="twemoji:flag-argentina" />
+		</button>
+		<button
+			id={language === 'en' ? 'current' : ''}
+			on:click={() => switchLanguage('en')}
+			on:click={restart}
+		>
+			<Icon icon="twemoji:flag-united-states" />
+		</button>
 	</nav>
 {/key}
