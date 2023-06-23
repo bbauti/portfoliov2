@@ -81,15 +81,15 @@
 </script>
 
 <section id="contact">
-	<p
-		class="textheader"
+	<p class="textheader">
+		{i('page.contact.title')}
+	</p>
+	<form
+		on:submit|preventDefault={submitHandler}
 		use:inview
 		on:inview_enter={() => enterContact()}
 		on:inview_leave={() => leaveContact()}
 	>
-		{i('page.contact.title')}
-	</p>
-	<form on:submit|preventDefault={submitHandler}>
 		<div class="divInput">
 			<input
 				class="inputs"

@@ -8,7 +8,7 @@
 	let proyects = [
 		{
 			name: ['Portfolio'],
-			desc: i('page.projects.portfoliodesc'),
+			desc: 'portfoliodesc',
 			source: 'https://github.com/bbauti/portfoliov2',
 			link: '',
 			status: '',
@@ -17,7 +17,7 @@
 		},
 		{
 			name: ['Inventory App', '1rem'],
-			desc: i('page.projects.inventorydesc'),
+			desc: 'inventorydesc',
 			source: 'https://bitbucket.org/arrudeboy/inventory/src',
 			link: '',
 			status: 'wip',
@@ -99,7 +99,7 @@
 						</a>
 					</div>
 				</div>
-				<p class="proyectdesc">{proyect.desc}</p>
+				<p class="proyectdesc">{i('page.projects.' + proyect.desc)}</p>
 				<p class="lenguages">
 					{#each proyect.lenguages as leng, index}
 						<div class="lenguage">

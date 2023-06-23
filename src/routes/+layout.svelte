@@ -1,6 +1,5 @@
 <script>
 	// @ts-nocheck
-
 	import '../app.scss';
 	import Icon from '@iconify/svelte';
 	import { blur } from 'svelte/transition';
@@ -9,7 +8,12 @@
 	import { browser } from '$app/environment';
 	let mobile = false;
 	let current;
+	let defaultLeng;
 	if (browser) {
+		defaultLeng = navigator.languages[0].slice(0, 2);
+		if (defaultLeng != 'es') {
+			switchLanguage(defaultLeng);
+		}
 		current = window.location.pathname;
 		if (
 			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
@@ -31,7 +35,6 @@
 	let protocol;
 
 	function restart() {
-		location.reload();
 		current = window.location.pathname;
 	}
 </script>
