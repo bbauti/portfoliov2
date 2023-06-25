@@ -89,12 +89,12 @@
 							{#if proyect.status === 'wip'}
 								<Icon icon="ic:round-construction" />
 							{:else if proyect.status === 'done'}
-								<a href={proyect.link} class="done">
+								<a href={proyect.link} aria-label="link" class="done">
 									<Icon icon="ph:arrow-square-out-bold" />
 								</a>
 							{/if}
 						</span>
-						<a href={proyect.source} class="git" target="_blank">
+						<a href={proyect.source} class="git" aria-label="git" target="_blank">
 							<Icon icon="devicon:git" />
 						</a>
 					</div>

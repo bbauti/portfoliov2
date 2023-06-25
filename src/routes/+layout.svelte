@@ -49,6 +49,7 @@
 	{/if}
 	<nav class="nav">
 		<a
+			aria-label="home"
 			href="/"
 			title="Home"
 			id="navhome"
@@ -56,6 +57,7 @@
 			class="logo {current === '/' ? 'current' : ''}"><Icon icon="ant-design:home-filled" /></a
 		>
 		<a
+			aria-label="contact"
 			href="/#contact"
 			title="Contacto"
 			id="navcontact"
@@ -63,6 +65,7 @@
 			class="links {current === '/#contact' ? 'current' : ''}"><Icon icon="uil:message" /></a
 		>
 		<a
+			aria-label="about"
 			href="/about"
 			title="About"
 			id="navabout"
@@ -70,10 +73,12 @@
 			class="links {current === '/about' ? 'current' : ''}"
 			><Icon icon="fluent:person-48-filled" /></a
 		>
-		<a href="/" title="CV" id="disabled" class="links"><Icon icon="mdi:resume" /></a>
+		<a href="/" aria-label="cv" title="CV" id="disabled" class="links"><Icon icon="mdi:resume" /></a
+		>
 	</nav>
 	<nav class="navleng">
 		<button
+			aria-label="es"
 			id={language === 'es' ? 'current' : ''}
 			on:click={() => switchLanguage('es')}
 			on:click={restart}
@@ -81,6 +86,7 @@
 			<Icon icon="twemoji:flag-argentina" />
 		</button>
 		<button
+			aria-label="en"
 			id={language === 'en' ? 'current' : ''}
 			on:click={() => switchLanguage('en')}
 			on:click={restart}

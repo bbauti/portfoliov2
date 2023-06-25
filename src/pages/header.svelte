@@ -6,8 +6,8 @@
 <header>
 	<section id="title">
 		<h1 class="presentation">{i('page.home.title')}<span id="name">Bautista Igarzabal</span></h1>
-		<h4 class="desc">
+		<p class="desc">
 			{@html i('page.home.desc')}
-		</h4>
+		</p>
 	</section>
 </header>
