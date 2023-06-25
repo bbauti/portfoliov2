@@ -304,7 +304,7 @@
 
 	.icon-card a,
 	.icon-card a:visited {
-		color: $text-color;
+		color: #787878;
 		text-decoration: none;
 	}
 
