@@ -12,7 +12,7 @@
 	if (browser) {
 		defaultLeng = navigator.languages[0].slice(0, 2);
 		if (defaultLeng != 'es') {
-			switchLanguage(defaultLeng);
+			switchLanguage('en');
 		}
 		current = window.location.pathname;
 		if (

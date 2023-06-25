@@ -2,7 +2,7 @@
   "page": {
     "home": {
       "title": "¡Hola! Soy",
-      "desc": "Un <a href='#proyects' id='developer'>desarrollador</a> y <a href='https://be.net/bbauti' target='_blank' id='artist'>artista.</a>"
+      "desc": "Un <a href='#proyects' id='developer'>desarrollador</a> y <a href='https://be.net/bbauti' target='_blank' id='artist'>artista</a>."
     },
     "projects": {
       "title": "Proyectos",

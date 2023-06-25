@@ -15,7 +15,7 @@
 		email: yup
 			.string()
 			.required(i('page.contact.errors.required'))
-			.email(i('page.contact.errors.badmail')),
+			.email(i('page.contact.errors.bademail')),
 		message: yup.string().required(i('page.contact.errors.messagerequired'))
 	});
 
