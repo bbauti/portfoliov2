@@ -412,91 +412,91 @@ header::before {
   grid-auto-rows: minmax(100px, auto);
 }
 
-.proyects > article {
-  border: 1px solid rgba(255, 255, 255, 0.418);
-  margin: 0 0 5vw 0;
-  padding: 2rem;
-  border-radius: 25px;
-  background-color: #a8a8a80a;
-  word-wrap: break-word;
-  overflow: hidden;
-}
+// .proyects > article {
+//   // border: 1px solid rgba(255, 255, 255, 0.418);
+//   margin: 0 0 5vw 0;
+//   // padding: 2rem;
+//   border-radius: 25px;
+//   background-color: #a8a8a80a;
+//   word-wrap: break-word;
+//   overflow: hidden;
+// }
 
-article > .head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+// .content > .head {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
 
-.ptitle {
-  font-size: 1.3rem;
-  padding: 0.3rem;
-}
+// .ptitle {
+//   font-size: 1.3rem;
+//   padding: 0.3rem;
+// }
 
-.icons {
-  font-size: 1.3rem;
-  display: flex;
-}
+// .icons {
+//   font-size: 1.3rem;
+//   display: flex;
+// }
 
-.statusicon a,
-.statusicon a:visited {
-  color: $text-color;
-  text-decoration: none;
-}
+// .statusicon a,
+// .statusicon a:visited {
+//   color: $text-color;
+//   text-decoration: none;
+// }
 
-.lenguages {
-  font-size: 0.8rem;
-  font-weight: 800;
-  display: flex;
-  flex-direction: row;
-  letter-spacing: 0.05rem;
-  flex-wrap: wrap;
-  gap: 0 1.5rem;
-}
+// .lenguages {
+//   font-size: 0.8rem;
+//   font-weight: 800;
+//   display: flex;
+//   flex-direction: row;
+//   letter-spacing: 0.05rem;
+//   flex-wrap: wrap;
+//   gap: 0 1.5rem;
+// }
 
-.leng {
-  color: $important-text;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-    Noto Sans, sans-serif;
-}
+// .leng {
+//   color: $important-text;
+//   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+//     Noto Sans, sans-serif;
+// }
 
-.done > .iconify {
-  color: rgba(70, 70, 250, 0.753);
-  padding: 0.3rem;
-  border-radius: 5px;
-  text-align: center;
-  &:hover {
-    background-color: #ffffff1c;
-  }
-}
+// .done > .iconify {
+//   color: rgba(70, 70, 250, 0.753);
+//   padding: 0.3rem;
+//   border-radius: 5px;
+//   text-align: center;
+//   &:hover {
+//     background-color: #ffffff1c;
+//   }
+// }
 
-.git > .iconify {
-  padding: 0.3rem;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  &:hover {
-    background-color: #ffffff1c;
-  }
-}
+// .git > .iconify {
+//   padding: 0.3rem;
+//   border-radius: 5px;
+//   display: flex;
+//   align-items: center;
+//   &:hover {
+//     background-color: #ffffff1c;
+//   }
+// }
 
-.statusicon > .iconify {
-  padding: 0.3rem;
-}
+// .statusicon > .iconify {
+//   padding: 0.3rem;
+// }
 
-.ptitle {
-  color: $important-text;
-  margin: 0;
-}
+// .ptitle {
+//   color: $important-text;
+//   margin: 0;
+// }
 
-.proyectdesc {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-    Noto Sans, sans-serif;
-  font-weight: 600;
-  font-size: 1em;
-  letter-spacing: 0.1rem;
-  color: #b8b8b8;
-}
+// .proyectdesc {
+//   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+//     Noto Sans, sans-serif;
+//   font-weight: 600;
+//   font-size: 1em;
+//   letter-spacing: 0.1rem;
+//   color: #b8b8b8;
+// }
 
 /////////////
 // Contact //
@@ -694,18 +694,22 @@ strong {
     margin-top: 15vw;
   }
 
-  .proyects {
-    margin: 0 auto;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 40px;
-    grid-auto-rows: minmax(10px, auto);
+  .card {
+    width: unset;
   }
 
-  .proyects > article {
-    margin: 0 0 1vw 0;
-    // padding: 2rem;
-  }
+  // .proyects {
+  //   margin: 0 auto;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   align-items: center;
+  //   gap: 40px;
+  //   grid-auto-rows: minmax(10px, auto);
+  // }
+
+  // .proyects > article {
+  //   margin: 0 0 1vw 0;
+  //   // padding: 2rem;
+  // }
 
   form {
     display: flex;
@@ -728,10 +732,10 @@ strong {
 }
 
 @media only screen and (min-width: 1200px) {
-  .proyects {
-    // grid-template-columns: repeat(2, 1fr);
-    width: 50rem;
-  }
+  // .proyects {
+  //   // grid-template-columns: repeat(2, 1fr);
+  //   width: 50rem;
+  // }
 
   form {
     width: 30vw;

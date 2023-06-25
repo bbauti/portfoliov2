@@ -7,7 +7,10 @@
     "projects": {
       "title": "Proyectos",
       "portfoliodesc": "Estás en esta aplicación web, creada para demostrar mis habilidades.",
-      "inventorydesc": "Aplicación web dedicada al control del inventario de una institución escolar. Se empleó la metodología SCRUM, y se me ha asignado el rol de desarrollador y DevOps."
+      "inventorydesc": "Aplicación web dedicada al control del inventario de una institución escolar. Se empleó la metodología SCRUM, y se me ha asignado el rol de desarrollador y DevOps.",
+      "tododesc": "Pagina web para gestionar tareas con el uso de localStorage.",
+      "weatherdesc": "Pagina web para obtener informacion sobre el clima.",
+      "colordesc": "Juego sobre adivinar un color en formato rgb, con cuadrados de colores aleatorios."
     },
     "contact": {
       "title": "Contáctame",
