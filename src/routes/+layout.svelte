@@ -94,4 +94,20 @@
 			<Icon icon="twemoji:flag-united-states" />
 		</button>
 	</nav>
+	<nav class="social">
+		<a
+			href="https://www.linkedin.com/in/bbauti/"
+			target="_blank"
+			aria-label="linkedin"
+		>
+			<Icon icon="mdi:linkedin" />
+		</a>
+		<a
+			href="https://github.com/bbauti/"
+			target="_blank"
+			aria-label="git"
+		>
+			<Icon icon="mdi:github" />
+		</a>
+	</nav>
 {/key}
