@@ -103,11 +103,11 @@
 			<Icon icon="mdi:linkedin" />
 		</a>
 		<a
-			href="https://github.com/bbauti/"
+			href="https://read.cv/bbauti"
 			target="_blank"
-			aria-label="git"
+			aria-label="resume"
 		>
-			<Icon icon="mdi:github" />
+			<Icon icon="ph:read-cv-logo-fill" />
 		</a>
 	</nav>
 {/key}
